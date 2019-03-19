@@ -1,5 +1,6 @@
 
 const primelogger = (num) => {
+  var arrayPrimes = [];
   for( var num = 2; num < 100; num++)
    {
      count = 0;
@@ -13,40 +14,47 @@ const primelogger = (num) => {
      }
      if(count == 0 && num != 1 )
      {
-       console.log(num + "prime");
+       arrayPrimes.push(num + "prime");
      }
    }
-   console.log(num);
+   arrayPrimes.push(num);
+   return arrayPrimes
 }
 
 
 const logEvens = (startNum) =>{
+  var arrayEvens = [];
 for (startNum = 1; startNum <=100; startNum++){
   if (startNum%2===0){
-    console.log(startNum + "even");
+    arrayEvens.push((startNum + "even"));
   }else{
-    console.log(startNum + "odd");
+    arrayEvens.push((startNum + "odd"));
   }
 }
+  return arrayEvens;
 }
 
 const fizzBuzz = (startingNum) => {
+  var arrayFizzBuzz = [];
   while (startingNum <= 100){
     if (startingNum%3===0 && startingNum%5===0){
-      console.log(startingNum +"FizzBuzz");
+      arrayFizzBuzz.push(startingNum +"FizzBuzz");
     }else if (startingNum%3===0) {
-      console.log(startingNum +"Fizz");
+      arrayFizzBuzz.push(startingNum +"Fizz");
     }else if (startingNum%5===0){
-      console.log(startingNum +"Buzz");
+      arrayFizzBuzz.push(startingNum +"Buzz");
     }else{
-      console.log(startingNum);
+      arrayFizzBuzz.push(startingNum);
     }
     startingNum ++;
   }
+  return arrayFizzBuzz;
 }
 console.log(fizzBuzz(1));
 console.log(logEvens(1));
 console.log(primelogger(1));
 console.log("_____________________________________________________________");
 
-//const numHelper =
+/*const numHelper = (){
+
+}*/
