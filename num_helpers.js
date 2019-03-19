@@ -6,11 +6,10 @@ const primelogger = (num) => {
      count = 0;
      for (i = 2; i <= num/2; i++)
      {
-     if(num%i === 0)
-     {
+     if(num%i === 0)     {
          count++;
-       console.log(num);
-   }
+       arrayPrimes.push(num);
+        }
      }
      if(count == 0 && num != 1 )
      {
@@ -55,6 +54,11 @@ console.log(logEvens(1));
 console.log(primelogger(1));
 console.log("_____________________________________________________________");
 
-/*const numHelper = (){
-
-}*/
+const numHelper = (array1, array2, array3)=>{
+  arrayNumHelper = [];
+  for (let x= 0; x<100; x++){
+    arrayNumHelper.push(array1[x]+array2[x]+array3[x]);
+  }
+  return arrayNumHelper;
+}
+console.log(numHelper(primelogger, logEvens, fizzBuzz));
