@@ -8,7 +8,7 @@ const primelogger = (num) => {
      if(num%i === 0)
      {
          count++;
-       break;
+       console.log(num);
    }
      }
      if(count == 0 && num != 1 )
@@ -48,3 +48,5 @@ console.log(fizzBuzz(1));
 console.log(logEvens(1));
 console.log(primelogger(1));
 console.log("_____________________________________________________________");
+
+//const numHelper =
